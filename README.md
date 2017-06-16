@@ -1,4 +1,4 @@
-##Create config.js file on root path:
+## config.js file on root path:
 ```javascript
 export const configs = {
     HOST: 'http://localhost',

@@ -1,0 +1,23 @@
+{
+  "name": "os-toolkit",
+  "version": "1.0.0",
+  "description": "Open Syllabus UI utils toolkit.",
+  "main": "configs.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrancooHM/os-toolkit.git"
+  },
+  "keywords": [
+    "osp",
+    "utils"
+  ],
+  "author": "Franco Rabaglia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FrancooHM/os-toolkit/issues"
+  },
+  "homepage": "https://github.com/FrancooHM/os-toolkit#readme"
+}

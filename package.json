@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/FrancooHM/os-toolkit/issues"
   },
-  "homepage": "https://github.com/FrancooHM/os-toolkit#readme"
+  "homepage": "https://github.com/FrancooHM/os-toolkit#readme",
+  "dependencies": {
+    "dotenv": "^4.0.0"
+  }
 }

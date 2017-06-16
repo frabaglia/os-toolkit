@@ -1,6 +1,6 @@
 import {
     configs
-} from '../../configs'
+} from '../configs'
 import {
     syllabusURLQueryBuilder
 } from '../SyllabusURLQueryBuilder/component'

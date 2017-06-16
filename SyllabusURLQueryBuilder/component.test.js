@@ -1,7 +1,5 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
 import {syllabusURLQueryBuilder} from './component'
-import {configs} from '../../configs'
+import {configs} from '../configs'
 
 it('build querys without crashing', () => {
     var titleParams = {

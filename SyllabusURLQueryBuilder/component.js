@@ -1,5 +1,4 @@
 class SyllabusURLQueryBuilder {
-    constructor() {}
 
     addUrlTitleResultsListParams = (url, params) => {
         var {
@@ -23,7 +22,7 @@ class SyllabusURLQueryBuilder {
 
 
         if (page != null) {
-            for (var i in page) {
+            for (let i in page) {
                 if (firstParam) {
                     url = url + "page=" + page[i]
                     firstParam = false
@@ -32,7 +31,7 @@ class SyllabusURLQueryBuilder {
             }
         }
         if (pub_year_start != null) {
-            for (var i in pub_year_start) {
+            for (let i in pub_year_start) {
                 if (firstParam) {
                     url = url + "pub_year_start=" + pub_year_start[i]
                     firstParam = false
@@ -41,7 +40,7 @@ class SyllabusURLQueryBuilder {
             }
         }
         if (pub_year_end != null) {
-            for (var i in pub_year_end) {
+            for (let i in pub_year_end) {
                 if (firstParam) {
                     url = url + "pub_year_end=" + pub_year_end[i]
                     firstParam = false
@@ -50,7 +49,7 @@ class SyllabusURLQueryBuilder {
             }
         }
         if (class_year_start != null) {
-            for (var i in class_year_start) {
+            for (let i in class_year_start) {
                 if (firstParam) {
                     url = url + "class_year_start=" + class_year_start[i]
                     firstParam = false
@@ -59,7 +58,7 @@ class SyllabusURLQueryBuilder {
             }
         }
         if (class_year_end != null) {
-            for (var i in class_year_end) {
+            for (let i in class_year_end) {
                 if (firstParam) {
                     url = url + "class_year_end=" + class_year_end[i]
                     firstParam = false
@@ -68,7 +67,7 @@ class SyllabusURLQueryBuilder {
             }
         }
         if (open_access != null) {
-            for (var i in open_access) {
+            for (let i in open_access) {
                 if (firstParam) {
                     url = url + "open_access=" + open_access[i]
                     firstParam = false
@@ -77,7 +76,7 @@ class SyllabusURLQueryBuilder {
             }
         }
         if (inst_type != null) {
-            for (var i in inst_type) {
+            for (let i in inst_type) {
                 if (firstParam) {
                     url = url + "inst_type=" + inst_type[i]
                     firstParam = false
@@ -86,7 +85,7 @@ class SyllabusURLQueryBuilder {
             }
         }
         if (author != null) {
-            for (var i in author) {
+            for (let i in author) {
                 if (firstParam) {
                     url = url + "author=" + author[i]
                     firstParam = false
@@ -95,7 +94,7 @@ class SyllabusURLQueryBuilder {
             }
         }
         if (institution != null) {
-            for (var i in institution) {
+            for (let i in institution) {
                 if (firstParam) {
                     url = url + "institution=" + institution[i]
                     firstParam = false
@@ -104,7 +103,7 @@ class SyllabusURLQueryBuilder {
             }
         }
         if (field != null) {
-            for (var i in field) {
+            for (let i in field) {
                 if (firstParam) {
                     url = url + "field=" + field[i]
                     firstParam = false
@@ -113,7 +112,7 @@ class SyllabusURLQueryBuilder {
             }
         }
         if (country != null) {
-            for (var i in country) {
+            for (let i in country) {
                 if (firstParam) {
                     url = url + "country=" + country[i]
                     firstParam = false
@@ -122,7 +121,7 @@ class SyllabusURLQueryBuilder {
             }
         }
         if (us_state != null) {
-            for (var i in us_state) {
+            for (let i in us_state) {
                 if (firstParam) {
                     url = url + "us_state=" + us_state[i]
                     firstParam = false
@@ -131,7 +130,7 @@ class SyllabusURLQueryBuilder {
             }
         }
         if (query != null) {
-            for (var i in query) {
+            for (let i in query) {
                 if (firstParam) {
                     url = url + "query=" + query[i]
                     firstParam = false
@@ -156,7 +155,7 @@ class SyllabusURLQueryBuilder {
 
 
         if (page != null) {
-            for (var i in page) {
+            for (let i in page) {
                 if (firstParam) {
                     url = url + "page=" + page[i]
                     firstParam = false
@@ -165,7 +164,7 @@ class SyllabusURLQueryBuilder {
             }
         }
         if (institution != null) {
-            for (var i in institution) {
+            for (let i in institution) {
                 if (firstParam) {
                     url = url + "institution=" + institution[i]
                     firstParam = false
@@ -175,7 +174,7 @@ class SyllabusURLQueryBuilder {
         }
 
         if (field != null) {
-            for (var i in field) {
+            for (let i in field) {
                 if (firstParam) {
                     url = url + "field=" + field[i]
                     firstParam = false
@@ -185,7 +184,7 @@ class SyllabusURLQueryBuilder {
         }
 
         if (country != null) {
-            for (var i in country) {
+            for (let i in country) {
                 if (firstParam) {
                     url = url + "country=" + country[i]
                     firstParam = false
@@ -195,7 +194,7 @@ class SyllabusURLQueryBuilder {
         }
 
         if (query != null) {
-            for (var i in query) {
+            for (let i in query) {
                 if (firstParam) {
                     url = url + "query=" + query[i]
                     firstParam = false
@@ -219,7 +218,7 @@ class SyllabusURLQueryBuilder {
 
 
         if (page != null) {
-            for (var i in page) {
+            for (let i in page) {
                 if (firstParam) {
                     url = url + "page=" + page[i]
                     firstParam = false
@@ -228,7 +227,7 @@ class SyllabusURLQueryBuilder {
             }
         }
         if (query != null) {
-            for (var i in query) {
+            for (let i in query) {
                 if (firstParam) {
                     url = url + "query=" + query[i]
                     firstParam = false
@@ -238,7 +237,7 @@ class SyllabusURLQueryBuilder {
         }
 
         if (field != null) {
-            for (var i in field) {
+            for (let i in field) {
                 if (firstParam) {
                     url = url + "field=" + field[i]
                     firstParam = false
@@ -248,7 +247,7 @@ class SyllabusURLQueryBuilder {
         }
 
         if (country != null) {
-            for (var i in country) {
+            for (let i in country) {
                 if (firstParam) {
                     url = url + "country=" + country[i]
                     firstParam = false
@@ -277,7 +276,7 @@ class SyllabusURLQueryBuilder {
 
 
         if (page != null) {
-            for (var i in page) {
+            for (let i in page) {
                 if (firstParam) {
                     url = url + "page=" + page[i]
                     firstParam = false
@@ -286,7 +285,7 @@ class SyllabusURLQueryBuilder {
             }
         }
         if (pub_year_start != null) {
-            for (var i in pub_year_start) {
+            for (let i in pub_year_start) {
                 if (firstParam) {
                     url = url + "pub_year_start=" + pub_year_start[i]
                     firstParam = false
@@ -295,7 +294,7 @@ class SyllabusURLQueryBuilder {
             }
         }
         if (pub_year_end != null) {
-            for (var i in pub_year_end) {
+            for (let i in pub_year_end) {
                 if (firstParam) {
                     url = url + "pub_year_end=" + pub_year_end[i]
                     firstParam = false
@@ -304,7 +303,7 @@ class SyllabusURLQueryBuilder {
             }
         }
         if (class_year_start != null) {
-            for (var i in class_year_start) {
+            for (let i in class_year_start) {
                 if (firstParam) {
                     url = url + "class_year_start=" + class_year_start[i]
                     firstParam = false
@@ -313,7 +312,7 @@ class SyllabusURLQueryBuilder {
             }
         }
         if (class_year_end != null) {
-            for (var i in class_year_end) {
+            for (let i in class_year_end) {
                 if (firstParam) {
                     url = url + "class_year_end=" + class_year_end[i]
                     firstParam = false
@@ -322,7 +321,7 @@ class SyllabusURLQueryBuilder {
             }
         }
         if (field != null) {
-            for (var i in field) {
+            for (let i in field) {
                 if (firstParam) {
                     url = url + "field=" + field[i]
                     firstParam = false
@@ -331,7 +330,7 @@ class SyllabusURLQueryBuilder {
             }
         }
         if (country != null) {
-            for (var i in country) {
+            for (let i in country) {
                 if (firstParam) {
                     url = url + "country=" + country[i]
                     firstParam = false
@@ -340,7 +339,7 @@ class SyllabusURLQueryBuilder {
             }
         }
         if (query != null) {
-            for (var i in query) {
+            for (let i in query) {
                 if (firstParam) {
                     url = url + "query=" + query[i]
                     firstParam = false
@@ -363,7 +362,7 @@ class SyllabusURLQueryBuilder {
 
 
         if (page != null) {
-            for (var i in page) {
+            for (let i in page) {
                 if (firstParam) {
                     url = url + "page=" + page[i]
                     firstParam = false
@@ -372,7 +371,7 @@ class SyllabusURLQueryBuilder {
             }
         }
         if (query != null) {
-            for (var i in query) {
+            for (let i in query) {
                 if (firstParam) {
                     url = url + "query=" + query[i]
                     firstParam = false
@@ -382,7 +381,7 @@ class SyllabusURLQueryBuilder {
         }
 
         if (country != null) {
-            for (var i in country) {
+            for (let i in country) {
                 if (firstParam) {
                     url = url + "country=" + country[i]
                     firstParam = false
@@ -406,7 +405,7 @@ class SyllabusURLQueryBuilder {
 
 
         if (page != null) {
-            for (var i in page) {
+            for (let i in page) {
                 if (firstParam) {
                     url = url + "page=" + page[i]
                     firstParam = false
@@ -415,7 +414,7 @@ class SyllabusURLQueryBuilder {
             }
         }
         if (query != null) {
-            for (var i in query) {
+            for (let i in query) {
                 if (firstParam) {
                     url = url + "query=" + query[i]
                     firstParam = false
@@ -425,7 +424,7 @@ class SyllabusURLQueryBuilder {
         }
 
         if (field != null) {
-            for (var i in field) {
+            for (let i in field) {
                 if (firstParam) {
                     url = url + "field=" + field[i]
                     firstParam = false

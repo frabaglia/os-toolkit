@@ -9,18 +9,20 @@ import {
   TYPE_INSTITUTION,
   TYPE_FIELD,
   TYPE_COUNTRY,
-  TYPE_PUBLISHER,
-  TYPE_INSTITUTION_FIELD
-} from '../../constants/store-types'
+  TYPE_PUBLISHER
+} from '../../constants/explorer/store-types'
 import {
   isStoredDataUpToDate
 } from '../Date/component'
-
+import {
+  httpResultWrapperSimulator,
+  httpResultsListWrapperSimulator
+} from '../HTTP'
 require('dotenv').config()
 
 const DEV_ERROR = "Simulated development error."
 
-class SyllabusHTTPService {
+class SyllabusExplorerHTTPService {
 
   constructor(HOST, PORT, REQUEST_DEV_TIMMING) {
     console.log("Creating SyllabusHTTPService...")
@@ -99,14 +101,15 @@ class SyllabusHTTPService {
     return (this.SERVER_ENV !== "development") ? new Promise(this.settledGetInstitutionResultPromise) : axios.get(url)
   }
 
-  getInstitutionFieldResult = (_id) => {
-    //TODO: Query builder add
-    let url = this.BASE_URL + "/api/institutions-field" + _id
-
-    console.log("Creating HTTP request action: " + url)
-
-    return (this.SERVER_ENV !== "development") ? new Promise(this.settledGetInstitutionFieldResultPromise) : axios.get(url)
-  }
+  //DEPRECATED -  This method will be totally removed in next versions.
+  // getInstitutionFieldResult = (_id) => {
+  //
+  //   let url = this.BASE_URL + "/api/institutions-field" + _id
+  //
+  //   console.log("Creating HTTP request action: " + url)
+  //
+  //   return (this.SERVER_ENV !== "development") ? new Promise(this.settledGetInstitutionFieldResultPromise) : axios.get(url)
+  // }
 
   getCountryResultsList = (params) => {
     let url = syllabusURLQueryBuilder.addUrlCountryResultsListParams(this.BASE_URL + "/api/countries", params)
@@ -214,7 +217,7 @@ class SyllabusHTTPService {
       var tid = setTimeout(() => {
         clearInterval(tid)
         resolve(
-          this.httpResultsListWrapperSimulator([{
+          httpResultsListWrapperSimulator([{
             "title": "The Elements of Style",
             "pub_year": 1920,
             "rank": 1,
@@ -258,7 +261,7 @@ class SyllabusHTTPService {
       var tid = setTimeout(() => {
         clearInterval(tid)
         resolve(
-          this.httpResultsListWrapperSimulator([{
+          httpResultsListWrapperSimulator([{
             "name_first": "Mark",
             "name_middle": null,
             "name_last": "Twain",
@@ -296,7 +299,7 @@ class SyllabusHTTPService {
       var tid = setTimeout(() => {
         clearInterval(tid)
         resolve(
-          this.httpResultsListWrapperSimulator([{
+          httpResultsListWrapperSimulator([{
             "name": "Yale University",
             "country": "USA",
             "rank": 1,
@@ -328,7 +331,7 @@ class SyllabusHTTPService {
       var tid = setTimeout(() => {
         clearInterval(tid)
         resolve(
-          this.httpResultsListWrapperSimulator([{
+          httpResultsListWrapperSimulator([{
             "name": "Elsevier",
             "rank": 1,
             "assignment_count": 125000,
@@ -360,7 +363,7 @@ class SyllabusHTTPService {
       var tid = setTimeout(() => {
         clearInterval(tid)
         resolve(
-          this.httpResultsListWrapperSimulator([{
+          httpResultsListWrapperSimulator([{
             "name": "History",
             "rank": 1,
             "syllabus_count": 20000,
@@ -389,7 +392,7 @@ class SyllabusHTTPService {
       var tid = setTimeout(() => {
         clearInterval(tid)
         resolve(
-          this.httpResultsListWrapperSimulator([{
+          httpResultsListWrapperSimulator([{
             "name": "United States",
             "rank": 1,
             "syllabus_count": 3000000,
@@ -423,7 +426,7 @@ class SyllabusHTTPService {
       var tid = setTimeout(() => {
         clearInterval(tid)
         resolve(
-          this.httpResultWrapperSimulator({
+          httpResultWrapperSimulator({
             "title": "The Elements of Style",
             "pub_year": 1920,
             "rank": 1,
@@ -446,7 +449,7 @@ class SyllabusHTTPService {
       var tid = setTimeout(() => {
         clearInterval(tid)
         resolve(
-          this.httpResultWrapperSimulator({
+          httpResultWrapperSimulator({
             "name_first": "Mark",
             "name_middle": null,
             "name_last": "Twain",
@@ -467,7 +470,7 @@ class SyllabusHTTPService {
       var tid = setTimeout(() => {
         clearInterval(tid)
         resolve(
-          this.httpResultWrapperSimulator({
+          httpResultWrapperSimulator({
             "name": "Yale University",
             "country": "USA",
             "rank": 1,
@@ -506,7 +509,7 @@ class SyllabusHTTPService {
       var tid = setTimeout(() => {
         clearInterval(tid)
         resolve(
-          this.httpResultWrapperSimulator({
+          httpResultWrapperSimulator({
             "name": "Elsevier",
             "rank": 1,
             "assignment_count": 125000,
@@ -525,7 +528,7 @@ class SyllabusHTTPService {
       var tid = setTimeout(() => {
         clearInterval(tid)
         resolve(
-          this.httpResultWrapperSimulator({
+          httpResultWrapperSimulator({
             "name": "History",
             "rank": 1,
             "syllabus_count": 20000,
@@ -543,7 +546,7 @@ class SyllabusHTTPService {
       var tid = setTimeout(() => {
         clearInterval(tid)
         resolve(
-          this.httpResultWrapperSimulator({
+          httpResultWrapperSimulator({
             "name": "United States",
             "rank": 1,
             "syllabus_count": 3000000,
@@ -564,7 +567,7 @@ class SyllabusHTTPService {
       var tid = setTimeout(() => {
         clearInterval(tid)
         resolve(
-          this.httpResultsListWrapperSimulator([{
+          httpResultsListWrapperSimulator([{
             "title": "The Elements of Style",
             "pub_year": 1920,
             "rank": 1,
@@ -608,7 +611,7 @@ class SyllabusHTTPService {
       var tid = setTimeout(() => {
         clearInterval(tid)
         resolve(
-          this.httpResultsListWrapperSimulator([{
+          httpResultsListWrapperSimulator([{
             "name_first": "Mark",
             "name_middle": null,
             "name_last": "Twain",
@@ -646,7 +649,7 @@ class SyllabusHTTPService {
       var tid = setTimeout(() => {
         clearInterval(tid)
         resolve(
-          this.httpResultsListWrapperSimulator([{
+          httpResultsListWrapperSimulator([{
             "name": "Yale University",
             "country": "USA",
             "rank": 1,
@@ -678,7 +681,7 @@ class SyllabusHTTPService {
       var tid = setTimeout(() => {
         clearInterval(tid)
         resolve(
-          this.httpResultsListWrapperSimulator([{
+          httpResultsListWrapperSimulator([{
             "name": "Elsevier",
             "rank": 1,
             "assignment_count": 125000,
@@ -710,7 +713,7 @@ class SyllabusHTTPService {
       var tid = setTimeout(() => {
         clearInterval(tid)
         resolve(
-          this.httpResultsListWrapperSimulator([{
+          httpResultsListWrapperSimulator([{
             "name": "History",
             "rank": 1,
             "syllabus_count": 20000,
@@ -739,7 +742,7 @@ class SyllabusHTTPService {
       var tid = setTimeout(() => {
         clearInterval(tid)
         resolve(
-          this.httpResultsListWrapperSimulator([{
+          httpResultsListWrapperSimulator([{
             "name": "United States",
             "rank": 1,
             "syllabus_count": 3000000,
@@ -883,4 +886,4 @@ class SyllabusHTTPService {
 /* Singleton exporting */
 /***********************/
 
-export let syllabusHTTPService = new SyllabusHTTPService(process.env.HOST, process.env.PORT, process.env.REQUEST_DEV_TIMMING)
+export let syllabusExplorerHTTPService = new SyllabusExplorerHTTPService(process.env.HOST, process.env.PORT, process.env.REQUEST_DEV_TIMMING)

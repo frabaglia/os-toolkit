@@ -10,7 +10,7 @@ require('dotenv').config()
 
 const DEV_ERROR = "Simulated development error."
 
-class SyllabusExplorerHTTPService {
+class SyllabusEduPortalHTTPService {
 
   constructor(HOST, PORT, REQUEST_DEV_TIMMING) {
     console.log("Creating SyllabusHTTPService...")
@@ -238,4 +238,4 @@ class SyllabusExplorerHTTPService {
 /* Singleton exporting */
 /***********************/
 
-export let syllabusExplorerHTTPService = new SyllabusExplorerHTTPService(process.env.HOST, process.env.PORT, process.env.REQUEST_DEV_TIMMING)
+export let syllabusEduPortalHTTPService = new SyllabusEduPortalHTTPService(process.env.HOST, process.env.PORT, process.env.REQUEST_DEV_TIMMING)

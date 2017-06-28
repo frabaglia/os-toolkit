@@ -1,439 +1,140 @@
 class SyllabusURLQueryBuilder {
 
-    addUrlTitleResultsListParams = (url, params) => {
-        var {
-            page,
-            pub_year_start,
-            pub_year_end,
-            class_year_start,
-            class_year_end,
-            open_access,
-            inst_type,
-            author,
-            institution,
-            field,
-            country,
-            us_state,
-            query
-        } = params
+  mapReduceURL = (expectedParams, params) => {
+    let firstParam = true
+    let paramsArray = Object.keys(params)
 
-        var firstParam = true
-        url += "?"
+    paramsArray.forEach((param) => {
+      if (expectedParams.indexOf(param) === -1) {
+        throw new Error("Whoops! " + param + " is not expected param for this query.");
+      }
+    })
 
+    return paramsArray.map((param) => {
+      if (firstParam) {
+        firstParam = false
+        return param + "=[" + params[param].toString() + "]"
+      } else
+        return "&" + param + "=[" + params[param].toString() + "]"
+    }).reduce(function(lastValue, currentValue) {
+      return lastValue + currentValue
+    })
+  }
 
-        if (page != null) {
-            for (let i in page) {
-                if (firstParam) {
-                    url = url + "page=" + page[i]
-                    firstParam = false
-                } else
-                    url = url + "&page=" + page[i]
-            }
-        }
-        if (pub_year_start != null) {
-            for (let i in pub_year_start) {
-                if (firstParam) {
-                    url = url + "pub_year_start=" + pub_year_start[i]
-                    firstParam = false
-                } else
-                    url = url + "&pub_year_start=" + pub_year_start[i]
-            }
-        }
-        if (pub_year_end != null) {
-            for (let i in pub_year_end) {
-                if (firstParam) {
-                    url = url + "pub_year_end=" + pub_year_end[i]
-                    firstParam = false
-                } else
-                    url = url + "&pub_year_end=" + pub_year_end[i]
-            }
-        }
-        if (class_year_start != null) {
-            for (let i in class_year_start) {
-                if (firstParam) {
-                    url = url + "class_year_start=" + class_year_start[i]
-                    firstParam = false
-                } else
-                    url = url + "&class_year_start=" + class_year_start[i]
-            }
-        }
-        if (class_year_end != null) {
-            for (let i in class_year_end) {
-                if (firstParam) {
-                    url = url + "class_year_end=" + class_year_end[i]
-                    firstParam = false
-                } else
-                    url = url + "&class_year_end=" + class_year_end[i]
-            }
-        }
-        if (open_access != null) {
-            for (let i in open_access) {
-                if (firstParam) {
-                    url = url + "open_access=" + open_access[i]
-                    firstParam = false
-                } else
-                    url = url + "&open_access=" + open_access[i]
-            }
-        }
-        if (inst_type != null) {
-            for (let i in inst_type) {
-                if (firstParam) {
-                    url = url + "inst_type=" + inst_type[i]
-                    firstParam = false
-                } else
-                    url = url + "&inst_type=" + inst_type[i]
-            }
-        }
-        if (author != null) {
-            for (let i in author) {
-                if (firstParam) {
-                    url = url + "author=" + author[i]
-                    firstParam = false
-                } else
-                    url = url + "&author=" + author[i]
-            }
-        }
-        if (institution != null) {
-            for (let i in institution) {
-                if (firstParam) {
-                    url = url + "institution=" + institution[i]
-                    firstParam = false
-                } else
-                    url = url + "&institution=" + institution[i]
-            }
-        }
-        if (field != null) {
-            for (let i in field) {
-                if (firstParam) {
-                    url = url + "field=" + field[i]
-                    firstParam = false
-                } else
-                    url = url + "&field=" + field[i]
-            }
-        }
-        if (country != null) {
-            for (let i in country) {
-                if (firstParam) {
-                    url = url + "country=" + country[i]
-                    firstParam = false
-                } else
-                    url = url + "&country=" + country[i]
-            }
-        }
-        if (us_state != null) {
-            for (let i in us_state) {
-                if (firstParam) {
-                    url = url + "us_state=" + us_state[i]
-                    firstParam = false
-                } else
-                    url = url + "&us_state=" + us_state[i]
-            }
-        }
-        if (query != null) {
-            for (let i in query) {
-                if (firstParam) {
-                    url = url + "query=" + query[i]
-                    firstParam = false
-                } else
-                    url = url + "&query=" + query[i]
-            }
-        }
-        return url
-    }
+  addUrlTitleResultsListParams = (url, params) => {
+    let expectedParams = ["pages",
+      "pub_year_start",
+      "pub_year_end",
+      "class_year_start",
+      "class_year_end",
+      "open_access",
+      "inst_type",
+      "authors",
+      "schools",
+      "fields",
+      "countries",
+      "us_state",
+      "query"
+    ]
 
-    addUrlAuthorResultsListParams = (url, params) => {
-        var {
-            page,
-            institution,
-            field,
-            country,
-            query
-        } = params
+    url += "/v1/works"
+    url += "?"
+    url += this.mapReduceURL(expectedParams, params)
 
-        var firstParam = true
-        url += "?"
+    return url
+  }
 
+  addUrlAuthorResultsListParams = (url, params) => {
+    let expectedParams = ["pages",
+      "schools",
+      "fields",
+      "countries",
+      "query"
+    ]
 
-        if (page != null) {
-            for (let i in page) {
-                if (firstParam) {
-                    url = url + "page=" + page[i]
-                    firstParam = false
-                } else
-                    url = url + "&page=" + page[i]
-            }
-        }
-        if (institution != null) {
-            for (let i in institution) {
-                if (firstParam) {
-                    url = url + "institution=" + institution[i]
-                    firstParam = false
-                } else
-                    url = url + "&institution=" + institution[i]
-            }
-        }
+    url += "/v1/authors"
+    url += "?"
+    url += this.mapReduceURL(expectedParams, params)
 
-        if (field != null) {
-            for (let i in field) {
-                if (firstParam) {
-                    url = url + "field=" + field[i]
-                    firstParam = false
-                } else
-                    url = url + "&field=" + field[i]
-            }
-        }
+    return url
+  }
 
-        if (country != null) {
-            for (let i in country) {
-                if (firstParam) {
-                    url = url + "country=" + country[i]
-                    firstParam = false
-                } else
-                    url = url + "&country=" + country[i]
-            }
-        }
+  addUrlInstitutionResultsListParams = (url, params) => {
+    let expectedParams = ["pages",
+      "fields",
+      "countries",
+      "query"
+    ]
+    url += "/v1/schools"
+    url += "?"
+    url += this.mapReduceURL(expectedParams, params)
 
-        if (query != null) {
-            for (let i in query) {
-                if (firstParam) {
-                    url = url + "query=" + query[i]
-                    firstParam = false
-                } else
-                    url = url + "&query=" + query[i]
-            }
-        }
-        return url
-    }
+    return url
+  }
 
-    addUrlInstitutionResultsListParams = (url, params) => {
-        var {
-            page,
-            field,
-            country,
-            query
-        } = params
+  addUrlPublisherResultsListParams = (url, params) => {
+    let expectedParams = ["pages",
+      "pub_year_start",
+      "pub_year_end",
+      "class_year_start",
+      "class_year_end",
+      "fields",
+      "countries",
+      "query"
+    ]
 
-        var firstParam = true
-        url += "?"
+    url += "/v1/publishers"
+    url += "?"
+    url += this.mapReduceURL(expectedParams, params)
 
+    return url
+  }
 
-        if (page != null) {
-            for (let i in page) {
-                if (firstParam) {
-                    url = url + "page=" + page[i]
-                    firstParam = false
-                } else
-                    url = url + "&page=" + page[i]
-            }
-        }
-        if (query != null) {
-            for (let i in query) {
-                if (firstParam) {
-                    url = url + "query=" + query[i]
-                    firstParam = false
-                } else
-                    url = url + "&query=" + query[i]
-            }
-        }
+  addUrlFieldResultsListParams = (url, params) => {
+    let expectedParams = ["pages",
+      "countries",
+      "query"
+    ]
 
-        if (field != null) {
-            for (let i in field) {
-                if (firstParam) {
-                    url = url + "field=" + field[i]
-                    firstParam = false
-                } else
-                    url = url + "&field=" + field[i]
-            }
-        }
+    url += "/v1/fields"
+    url += "?"
+    url += this.mapReduceURL(expectedParams, params)
 
-        if (country != null) {
-            for (let i in country) {
-                if (firstParam) {
-                    url = url + "country=" + country[i]
-                    firstParam = false
-                } else
-                    url = url + "&country=" + country[i]
-            }
-        }
+    return url
+  }
 
-        return url
-    }
+  addUrlCountryResultsListParams = (url, params) => {
+    let expectedParams = ["pages",
+      "fields",
+      "query"
+    ]
 
-    addUrlPublisherResultsListParams = (url, params) => {
-        var {
-            page,
-            pub_year_start,
-            pub_year_end,
-            class_year_start,
-            class_year_end,
-            field,
-            country,
-            query
-        } = params
+    url += "/v1/countries"
+    url += "?"
+    url += this.mapReduceURL(expectedParams, params)
 
-        var firstParam = true
-        url += "?"
+    return url
+  }
 
+  addUrlFullTextResultsListParams = (url, params) => {
+    let expectedParams = ["query"]
 
-        if (page != null) {
-            for (let i in page) {
-                if (firstParam) {
-                    url = url + "page=" + page[i]
-                    firstParam = false
-                } else
-                    url = url + "&page=" + page[i]
-            }
-        }
-        if (pub_year_start != null) {
-            for (let i in pub_year_start) {
-                if (firstParam) {
-                    url = url + "pub_year_start=" + pub_year_start[i]
-                    firstParam = false
-                } else
-                    url = url + "&pub_year_start=" + pub_year_start[i]
-            }
-        }
-        if (pub_year_end != null) {
-            for (let i in pub_year_end) {
-                if (firstParam) {
-                    url = url + "pub_year_end=" + pub_year_end[i]
-                    firstParam = false
-                } else
-                    url = url + "&pub_year_end=" + pub_year_end[i]
-            }
-        }
-        if (class_year_start != null) {
-            for (let i in class_year_start) {
-                if (firstParam) {
-                    url = url + "class_year_start=" + class_year_start[i]
-                    firstParam = false
-                } else
-                    url = url + "&class_year_start=" + class_year_start[i]
-            }
-        }
-        if (class_year_end != null) {
-            for (let i in class_year_end) {
-                if (firstParam) {
-                    url = url + "class_year_end=" + class_year_end[i]
-                    firstParam = false
-                } else
-                    url = url + "&class_year_end=" + class_year_end[i]
-            }
-        }
-        if (field != null) {
-            for (let i in field) {
-                if (firstParam) {
-                    url = url + "field=" + field[i]
-                    firstParam = false
-                } else
-                    url = url + "&field=" + field[i]
-            }
-        }
-        if (country != null) {
-            for (let i in country) {
-                if (firstParam) {
-                    url = url + "country=" + country[i]
-                    firstParam = false
-                } else
-                    url = url + "&country=" + country[i]
-            }
-        }
-        if (query != null) {
-            for (let i in query) {
-                if (firstParam) {
-                    url = url + "query=" + query[i]
-                    firstParam = false
-                } else
-                    url = url + "&query=" + query[i]
-            }
-        }
-        return url
-    }
+    url += "/v1/full-text"
+    url += "?"
+    url += this.mapReduceURL(expectedParams, params)
 
-    addUrlFieldResultsListParams = (url, params) => {
-        var {
-            page,
-            country,
-            query
-        } = params
+    return url
+  }
 
-        var firstParam = true
-        url += "?"
+  addUrlInstructorResultsListParams = (url, params) => {
+    let expectedParams = ["query"]
 
+    url += "/v1/instructor-email"
+    url += "?"
+    url += this.mapReduceURL(expectedParams, params)
 
-        if (page != null) {
-            for (let i in page) {
-                if (firstParam) {
-                    url = url + "page=" + page[i]
-                    firstParam = false
-                } else
-                    url = url + "&page=" + page[i]
-            }
-        }
-        if (query != null) {
-            for (let i in query) {
-                if (firstParam) {
-                    url = url + "query=" + query[i]
-                    firstParam = false
-                } else
-                    url = url + "&query=" + query[i]
-            }
-        }
-
-        if (country != null) {
-            for (let i in country) {
-                if (firstParam) {
-                    url = url + "country=" + country[i]
-                    firstParam = false
-                } else
-                    url = url + "&country=" + country[i]
-            }
-        }
-
-        return url
-    }
-
-    addUrlCountryResultsListParams = (url, params) => {
-        var {
-            page,
-            field,
-            query
-        } = params
-
-        var firstParam = true
-        url += "?"
-
-
-        if (page != null) {
-            for (let i in page) {
-                if (firstParam) {
-                    url = url + "page=" + page[i]
-                    firstParam = false
-                } else
-                    url = url + "&page=" + page[i]
-            }
-        }
-        if (query != null) {
-            for (let i in query) {
-                if (firstParam) {
-                    url = url + "query=" + query[i]
-                    firstParam = false
-                } else
-                    url = url + "&query=" + query[i]
-            }
-        }
-
-        if (field != null) {
-            for (let i in field) {
-                if (firstParam) {
-                    url = url + "field=" + field[i]
-                    firstParam = false
-                } else
-                    url = url + "&field=" + field[i]
-            }
-        }
-        return url
-    }
+    return url
+  }
 }
 
 export let syllabusURLQueryBuilder = new SyllabusURLQueryBuilder()

@@ -37,7 +37,7 @@ class SyllabusExplorerHTTPService {
   }
 
   getTitleResultsList = (params) => {
-    let url = syllabusURLQueryBuilder.addUrlTitleResultsListParams(this.BASE_URL + "/api/texts", params)
+    let url = syllabusURLQueryBuilder.addUrlTitleResultsListParams(this.BASE_URL, params)
 
     console.log("Creating HTTP request action: " + url)
 
@@ -53,7 +53,7 @@ class SyllabusExplorerHTTPService {
   }
 
   getAuthorResultsList = (params) => {
-    let url = syllabusURLQueryBuilder.addUrlAuthorResultsListParams(this.BASE_URL + "/api/authors", params)
+    let url = syllabusURLQueryBuilder.addUrlAuthorResultsListParams(this.BASE_URL, params)
 
     console.log("Creating HTTP request action: " + url)
 
@@ -69,7 +69,7 @@ class SyllabusExplorerHTTPService {
   }
 
   getFieldResultsList = (params) => {
-    let url = syllabusURLQueryBuilder.addUrlFieldResultsListParams(this.BASE_URL + "/api/fields", params)
+    let url = syllabusURLQueryBuilder.addUrlFieldResultsListParams(this.BASE_URL, params)
 
     console.log("Creating HTTP request action: " + url)
 
@@ -85,7 +85,7 @@ class SyllabusExplorerHTTPService {
   }
 
   getInstitutionResultsList = (params) => {
-    let url = syllabusURLQueryBuilder.addUrlInstitutionResultsListParams(this.BASE_URL + "/api/institutions", params)
+    let url = syllabusURLQueryBuilder.addUrlInstitutionResultsListParams(this.BASE_URL, params)
 
     console.log("Creating HTTP request action: " + url)
 
@@ -112,7 +112,7 @@ class SyllabusExplorerHTTPService {
   // }
 
   getCountryResultsList = (params) => {
-    let url = syllabusURLQueryBuilder.addUrlCountryResultsListParams(this.BASE_URL + "/api/countries", params)
+    let url = syllabusURLQueryBuilder.addUrlCountryResultsListParams(this.BASE_URL, params)
 
     console.log("Creating HTTP request action: " + url)
 
@@ -128,7 +128,7 @@ class SyllabusExplorerHTTPService {
   }
 
   getPublisherResultsList = (params) => {
-    let url = syllabusURLQueryBuilder.addUrlPublisherResultsListParams(this.BASE_URL + "/api/publishers", params)
+    let url = syllabusURLQueryBuilder.addUrlPublisherResultsListParams(this.BASE_URL, params)
 
     console.log("Creating HTTP request action: " + url)
 

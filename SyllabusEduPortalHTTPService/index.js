@@ -25,7 +25,7 @@ class SyllabusExplorerHTTPService {
   }
 
   getTitleResultsList = (params) => {
-    let url = syllabusURLQueryBuilder.addUrlTitleResultsListParams(this.BASE_URL + "/api/texts", params)
+    let url = syllabusURLQueryBuilder.addUrlTitleResultsListParams(this.BASE_URL, params)
 
     console.log("Creating HTTP request action: " + url)
 
@@ -41,7 +41,7 @@ class SyllabusExplorerHTTPService {
   }
 
   getAuthorResultsList = (params) => {
-    let url = syllabusURLQueryBuilder.addUrlAuthorResultsListParams(this.BASE_URL + "/api/authors", params)
+    let url = syllabusURLQueryBuilder.addUrlAuthorResultsListParams(this.BASE_URL, params)
 
     console.log("Creating HTTP request action: " + url)
 
@@ -49,7 +49,7 @@ class SyllabusExplorerHTTPService {
   }
 
   getInstructorResultsList = (params) => {
-    let url = syllabusURLQueryBuilder.addUrlInstructorResultsListParams(this.BASE_URL + "/api/instructor-email", params)
+    let url = syllabusURLQueryBuilder.addUrlInstructorResultsListParams(this.BASE_URL, params)
 
     console.log("Creating HTTP request action: " + url)
 
@@ -57,7 +57,7 @@ class SyllabusExplorerHTTPService {
   }
 
   getFullTextResultsList = (params) => {
-    let url = syllabusURLQueryBuilder.addUrlFullTextResultsListParams(this.BASE_URL + "/api/full-text", params)
+    let url = syllabusURLQueryBuilder.addUrlFullTextResultsListParams(this.BASE_URL, params)
 
     console.log("Creating HTTP request action: " + url)
 

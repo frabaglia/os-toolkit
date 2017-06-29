@@ -12,7 +12,7 @@ export let httpResultWrapperSimulator = (data) => {
 export let httpResultsListWrapperSimulator = (data) => {
   return {
     data: {
-      hits: [data, data]
+      hits:[data, data]
     },
     status: 200,
     statusText: 'OK',

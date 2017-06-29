@@ -18,10 +18,10 @@ class SyllabusURLQueryBuilder {
         return "&" + param + "=[" + params[param].toString() + "]"
     }).reduce(function(lastValue, currentValue) {
       return lastValue + currentValue
-    })
+    }, "")
   }
 
-  addUrlTitleResultsListParams = (url, params) => {
+  getQueryUrlTitleResultsListParams = (url, params) => {
     let expectedParams = ["pages",
       "pub_year_start",
       "pub_year_end",
@@ -37,14 +37,14 @@ class SyllabusURLQueryBuilder {
       "query"
     ]
 
-    url += "/v1/works"
+    url += "/v1/works.json"
     url += "?"
     url += this.mapReduceURL(expectedParams, params)
 
     return url
   }
 
-  addUrlAuthorResultsListParams = (url, params) => {
+  getQueryUrlAuthorResultsListParams = (url, params) => {
     let expectedParams = ["pages",
       "schools",
       "fields",
@@ -52,27 +52,27 @@ class SyllabusURLQueryBuilder {
       "query"
     ]
 
-    url += "/v1/authors"
+    url += "/v1/authors.json"
     url += "?"
     url += this.mapReduceURL(expectedParams, params)
 
     return url
   }
 
-  addUrlInstitutionResultsListParams = (url, params) => {
+  getQueryUrlInstitutionResultsListParams = (url, params) => {
     let expectedParams = ["pages",
       "fields",
       "countries",
       "query"
     ]
-    url += "/v1/schools"
+    url += "/v1/schools.json"
     url += "?"
     url += this.mapReduceURL(expectedParams, params)
 
     return url
   }
 
-  addUrlPublisherResultsListParams = (url, params) => {
+  getQueryUrlPublisherResultsListParams = (url, params) => {
     let expectedParams = ["pages",
       "pub_year_start",
       "pub_year_end",
@@ -83,57 +83,82 @@ class SyllabusURLQueryBuilder {
       "query"
     ]
 
-    url += "/v1/publishers"
+    url += "/v1/publishers.json"
     url += "?"
     url += this.mapReduceURL(expectedParams, params)
 
     return url
   }
 
-  addUrlFieldResultsListParams = (url, params) => {
+  getQueryUrlFieldResultsListParams = (url, params) => {
     let expectedParams = ["pages",
       "countries",
       "query"
     ]
 
-    url += "/v1/fields"
+    url += "/v1/fields.json"
     url += "?"
     url += this.mapReduceURL(expectedParams, params)
 
     return url
   }
 
-  addUrlCountryResultsListParams = (url, params) => {
+  getQueryUrlCountryResultsListParams = (url, params) => {
     let expectedParams = ["pages",
       "fields",
       "query"
     ]
 
-    url += "/v1/countries"
+    url += "/v1/countries.json"
     url += "?"
     url += this.mapReduceURL(expectedParams, params)
 
     return url
   }
 
-  addUrlFullTextResultsListParams = (url, params) => {
+  getQueryUrlFullTextResultsListParams = (url, params) => {
     let expectedParams = ["query"]
 
-    url += "/v1/full-text"
+    url += "/v1/full-text.json"
     url += "?"
     url += this.mapReduceURL(expectedParams, params)
 
     return url
   }
 
-  addUrlInstructorResultsListParams = (url, params) => {
+  getQueryUrlInstructorResultsListParams = (url, params) => {
     let expectedParams = ["query"]
 
-    url += "/v1/instructor-email"
+    url += "/v1/instructor-email.json"
     url += "?"
     url += this.mapReduceURL(expectedParams, params)
 
     return url
+  }
+
+  getQueryUrlTitleResult(url, _id) {
+    if (typeof _id === 'undefined' || _id == null) throw new Error("Whoops! id is expected param for this query.")
+    return url + "/v1/works/" + _id + ".json"
+  }
+  getQueryUrlAuthorResult(url, _id) {
+    if (typeof _id === 'undefined' || _id == null) throw new Error("Whoops! id is expected param for this query.")
+    return url + "/v1/authors/" + _id + ".json"
+  }
+  getQueryUrlFieldResult(url, _id) {
+    if (typeof _id === 'undefined' || _id == null) throw new Error("Whoops! id is expected param for this query.")
+    return url + "/v1/fields/" + _id + ".json"
+  }
+  getQueryUrlInstitutionResult(url, _id) {
+    if (typeof _id === 'undefined' || _id == null) throw new Error("Whoops! id is expected param for this query.")
+    return url + "/v1/schools/" + _id + ".json"
+  }
+  getQueryUrlCountryResult(url, _id) {
+    if (typeof _id === 'undefined' || _id == null) throw new Error("Whoops! id is expected param for this query.")
+    return url + "/v1/countries/" + _id + ".json"
+  }
+  getQueryUrlPublisherResult(url, _id) {
+    if (typeof _id === 'undefined' || _id == null) throw new Error("Whoops! id is expected param for this query.")
+    return url + "/v1/publishers/" + _id + ".json"
   }
 }
 

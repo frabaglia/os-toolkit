@@ -43,7 +43,7 @@ class SyllabusEduPortalHTTPService {
     return (this.SERVER_ENV === "development") ? new Promise(settledGetLandingUniversityPromise) : axios.get(url)
   }
   //TODO: TEST
-  getLandingUniversityFieldRequest = (params) => {
+  getLandingUniversityField = (params) => {
     let url = syllabusURLQueryBuilder.setQueryUrlLandingUniversityField(this.BASE_URL, params)
 
     console.log("Creating SyllabusEduPortalHTTPService request action: " + url)
@@ -51,7 +51,7 @@ class SyllabusEduPortalHTTPService {
     return (this.SERVER_ENV === "development") ? new Promise(settledGetLandingUniversityFieldPromise) : axios.get(url)
   }
   //TODO: TEST
-  getLandingUniversityFieldYearRequest = (params) => {
+  getLandingUniversityFieldYear = (params) => {
     let url = syllabusURLQueryBuilder.setQueryUrlLandingUniversityFieldYear(this.BASE_URL, params)
 
     console.log("Creating SyllabusEduPortalHTTPService request action: " + url)

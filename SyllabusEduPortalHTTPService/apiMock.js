@@ -14,8 +14,244 @@ export let settledGetLandingUniversityPromise = (resolve, reject) => {
       clearInterval(tid)
       resolve(
         httpResultWrapperSimulator({
-          mostFrecuent: [ /* @@@ FEDE @@@*/ ],
-          fieldChart: [ /* @@@ FEDE @@@*/ ]
+          syllabus_count: 1500,
+          mostFrecuent: [
+            {
+              "_id": 12,
+              "title": "Introduction to Economics",
+              "author": {
+                  "_id": 32,
+                  "author_first": "Neil",
+                  "author_middle": null,
+                  "author_last": "Cambell",
+              },
+              "publisher": {
+                  "_id": 14,
+                  "name": "Pengiun Books"
+              },
+              "pub_year": 2000,
+              "appearences": {
+                  "by_unique_field": {
+                      "_id": 152,
+                      "name": "Math",
+                      "syllabus_count": 9
+                  }
+              }
+            },
+            {
+              "_id": 12,
+              "title": "Introduction to Economics",
+              "author": {
+                  "_id": 32,
+                  "author_first": "Neil",
+                  "author_middle": null,
+                  "author_last": "Cambell",
+              },
+              "publisher": {
+                  "_id": 14,
+                  "name": "Pengiun Books"
+              },
+              "pub_year": 2000,
+              "appearences": {
+                  "by_unique_field": {
+                      "_id": 152,
+                      "name": "Math",
+                      "syllabus_count": 9
+                  }
+              }
+            },
+            {
+              "_id": 12,
+              "title": "Introduction to Economics",
+              "author": {
+                  "_id": 32,
+                  "author_first": "Neil",
+                  "author_middle": null,
+                  "author_last": "Cambell",
+              },
+              "publisher": {
+                  "_id": 14,
+                  "name": "Pengiun Books"
+              },
+              "pub_year": 2000,
+              "appearences": {
+                  "by_unique_field": {
+                      "_id": 152,
+                      "name": "Math",
+                      "syllabus_count": 9
+                  }
+              }
+            },
+            {
+              "_id": 12,
+              "title": "Introduction to Economics",
+              "author": {
+                  "_id": 32,
+                  "author_first": "Neil",
+                  "author_middle": null,
+                  "author_last": "Cambell",
+              },
+              "publisher": {
+                  "_id": 14,
+                  "name": "Pengiun Books"
+              },
+              "pub_year": 2000,
+              "appearences": {
+                  "by_unique_field": {
+                      "_id": 152,
+                      "name": "Math",
+                      "syllabus_count": 9
+                  }
+              }
+            },
+          ],
+          fieldChart: [{
+            label: 'Economics',
+            values: [
+              {x: '1997', y: 2000},
+              {x: '1998', y: 2000},
+              {x: '1999', y: 2000},
+              {x: '2000', y: 2000},
+              {x: '2001', y: 2000},
+              {x: '2002', y: 2000},
+              {x: '2003', y: 2000},
+              {x: '2004', y: 2000},
+              {x: '2005', y: 2000},
+              {x: '2006', y: 2000},
+              {x: '2007', y: 2000},
+              {x: '2008', y: 2000},
+              {x: '2009', y: 2000},
+              {x: '2010', y: 2000},
+              {x: '2011', y: 6000},
+              {x: '2012', y: 2500},
+              {x: '2013', y: 5500},
+              {x: '2014', y: 6000},
+              {x: '2015', y: 4000},
+              {x: '2016', y: 4000},
+            ]
+          },
+          {
+            label: 'Literature',
+            values: [
+              {x: '1997', y: 3000},
+              {x: '1998', y: 5000},
+              {x: '1999', y: 0},
+              {x: '2000', y: 4000},
+              {x: '2001', y: 0},
+              {x: '2002', y: 1500},
+              {x: '2003', y: 3000},
+              {x: '2004', y: 0},
+              {x: '2005', y: 6000},
+              {x: '2006', y: 0},
+              {x: '2007', y: 0},
+              {x: '2008', y: 7000},
+              {x: '2009', y: 0},
+              {x: '2010', y: 10000},
+              {x: '2011', y: 0},
+              {x: '2012', y: 20000},
+              {x: '2013', y: 0},
+              {x: '2014', y: 2000},
+              {x: '2015', y: 3000},
+              {x: '2016', y: 3000},
+            ]
+          },
+          {
+            label: 'History',
+            values: [
+              {x: '1997', y: 3800},
+              {x: '1998', y: 3800},
+              {x: '1999', y: 3800},
+              {x: '2000', y: 3800},
+              {x: '2001', y: 3800},
+              {x: '2002', y: 3800},
+              {x: '2003', y: 3800},
+              {x: '2004', y: 3800},
+              {x: '2005', y: 3800},
+              {x: '2006', y: 3800},
+              {x: '2007', y: 3800},
+              {x: '2008', y: 3800},
+              {x: '2009', y: 3800},
+              {x: '2010', y: 3800},
+              {x: '2011', y: 3800},
+              {x: '2012', y: 7000},
+              {x: '2013', y: 3800},
+              {x: '2014', y: 2000},
+              {x: '2015', y: 2000},
+              {x: '2016', y: 2000},
+            ]
+          },
+          {
+            label: 'English',
+            values: [
+              {x: '1997', y: 3000},
+              {x: '1998', y: 5000},
+              {x: '1999', y: 0},
+              {x: '2000', y: 4000},
+              {x: '2001', y: 0},
+              {x: '2002', y: 1500},
+              {x: '2003', y: 3000},
+              {x: '2004', y: 0},
+              {x: '2005', y: 6000},
+              {x: '2006', y: 0},
+              {x: '2007', y: 0},
+              {x: '2008', y: 7000},
+              {x: '2009', y: 0},
+              {x: '2010', y: 0},
+              {x: '2011', y: 0},
+              {x: '2012', y: 2000},
+              {x: '2013', y: 0},
+              {x: '2014', y: 0},
+              {x: '2015', y: 2000},
+              {x: '2016', y: 3800},
+            ]
+          },
+          {
+            label: 'Biology',
+            values: [
+              {x: '1997', y: 3000},
+              {x: '1998', y: 5000},
+              {x: '1999', y: 0},
+              {x: '2000', y: 4000},
+              {x: '2001', y: 0},
+              {x: '2002', y: 1500},
+              {x: '2003', y: 3000},
+              {x: '2004', y: 0},
+              {x: '2005', y: 6000},
+              {x: '2006', y: 0},
+              {x: '2007', y: 0},
+              {x: '2008', y: 7000},
+              {x: '2009', y: 0},
+              {x: '2010', y: 0},
+              {x: '2011', y: 0},
+              {x: '2012', y: 2000},
+              {x: '2013', y: 0},
+              {x: '2014', y: 0},
+              {x: '2015', y: 0},
+              {x: '2016', y: 4000},
+            ]
+          },],
+          universityField:[
+            {
+              name: 'History',
+              syllabus_count: 360,
+              _id: 1
+            },
+            {
+              name: 'Political Science',
+              syllabus_count: 316,
+              _id: 2
+            },
+            {
+              name: 'Astronomy',
+              syllabus_count: 290,
+              _id: 3
+            },
+            {
+              name: 'Classics',
+              syllabus_count: 22,
+              _id: 4
+            },
+          ]
         })
       )
     }, env.REQUEST_DEV_TIMMING)
@@ -30,8 +266,536 @@ export let settledGetLandingUniversityFieldPromise = (resolve, reject) => {
       clearInterval(tid)
       resolve(
         httpResultWrapperSimulator({
-          mostFrecuent: [ /* @@@ FEDE @@@*/ ],
-          closestPeerTeachingProfiles: [ /* @@@ FEDE @@@*/ ]
+          syllabyAvailableByYear:[
+            {
+              year: 2010,
+              syllabus_count: 20,
+              _id: 10,
+              id_year: 2010
+            },
+            {
+              year: 2011,
+              syllabus_count: 20,
+              _id: 10,
+              id_year: 2011
+            },
+            {
+              year: 2012,
+              syllabus_count: 300,
+              _id: 10,
+              id_year: 2012
+            },
+            {
+              year: 2013,
+              syllabus_count: 40,
+              _id: 10,
+              id_year: 2013
+            },
+          ],
+          topRanked: { "columbia": [
+            {
+              "_id": 52,
+              "rank": 1,
+              "name": "Columbia",
+              "author": {
+                  "_id": 51,
+                  "author_first": "Neil",
+                  "author_middle": null,
+                  "author_last": "Cambell",
+              },
+              "appearences": {
+                  "total": 100
+              },
+              "score": 9.9,
+              "pub_year": 1943
+            },
+            {
+              "_id": 52,
+              "rank": 2,
+              "name": "Columbia",
+              "author": {
+                  "_id": 51,
+                  "author_first": "Neil",
+                  "author_middle": null,
+                  "author_last": "Cambell",
+              },
+              "appearences": {
+                  "total": 100
+              },
+              "score": 9.9,
+              "pub_year": 1943
+            },
+            {
+              "_id": 52,
+              "rank": 3,
+              "name": "Columbia",
+              "author": {
+                  "_id": 51,
+                  "author_first": "Neil",
+                  "author_middle": null,
+                  "author_last": "Cambell",
+              },
+              "appearences": {
+                  "total": 100
+              },
+              "score": 9.9,
+              "pub_year": 1943
+            },
+            {
+              "_id": 52,
+              "rank": 4,
+              "name": "Columbia",
+              "author": {
+                  "_id": 51,
+                  "author_first": "Neil",
+                  "author_middle": null,
+                  "author_last": "Cambell",
+              },
+              "appearences": {
+                  "total": 100
+              },
+              "score": 9.9,
+              "pub_year": 1943
+            },
+            {
+              "_id": 52,
+              "rank": 5,
+              "name": "Columbia",
+              "author": {
+                  "_id": 51,
+                  "author_first": "Neil",
+                  "author_middle": null,
+                  "author_last": "Cambell",
+              },
+              "appearences": {
+                  "total": 100
+              },
+              "score": 9.9,
+              "pub_year": 1943
+            },
+            {
+              "_id": 52,
+              "rank": 6,
+              "name": "Columbia",
+              "author": {
+                  "_id": 51,
+                  "author_first": "Neil",
+                  "author_middle": null,
+                  "author_last": "Cambell",
+              },
+              "appearences": {
+                  "total": 100
+              },
+              "score": 9.9,
+              "pub_year": 1943
+            },
+            {
+              "_id": 52,
+              "rank": 7,
+              "name": "Columbia",
+              "author": {
+                  "_id": 51,
+                  "author_first": "Neil",
+                  "author_middle": null,
+                  "author_last": "Cambell",
+              },
+              "appearences": {
+                  "total": 100
+              },
+              "score": 9.9,
+              "pub_year": 1943
+            },
+            {
+              "_id": 52,
+              "rank": 8,
+              "name": "Columbia",
+              "author": {
+                  "_id": 51,
+                  "author_first": "Neil",
+                  "author_middle": null,
+                  "author_last": "Cambell",
+              },
+              "appearences": {
+                  "total": 100
+              },
+              "score": 9.9,
+              "pub_year": 1943
+            },
+            {
+              "_id": 52,
+              "rank": 9,
+              "name": "Columbia",
+              "author": {
+                  "_id": 51,
+                  "author_first": "Neil",
+                  "author_middle": null,
+                  "author_last": "Cambell",
+              },
+              "appearences": {
+                  "total": 100
+              },
+              "score": 9.9,
+              "pub_year": 1943
+            },
+            {
+              "_id": 52,
+              "rank": 10,
+              "name": "Columbia",
+              "author": {
+                  "_id": 51,
+                  "author_first": "Neil",
+                  "author_middle": null,
+                  "author_last": "Cambell",
+              },
+              "appearences": {
+                  "total": 100
+              },
+              "score": 9.9,
+              "pub_year": 1943
+            },
+            {
+              "_id": 52,
+              "rank": 11,
+              "name": "Columbia",
+              "author": {
+                  "_id": 51,
+                  "author_first": "Neil",
+                  "author_middle": null,
+                  "author_last": "Cambell",
+              },
+              "appearences": {
+                  "total": 100
+              },
+              "score": 9.9,
+              "pub_year": 1943
+          },
+        ],
+          "allSchools": [
+            {
+              "_id": 52,
+              "rank": 1,
+              "name": "All Schools",
+              "author": {
+                  "_id": 51,
+                  "author_first": "Neil",
+                  "author_middle": null,
+                  "author_last": "Cambell",
+              },
+              "appearences": {
+                  "total": 100
+              },
+              "score": 9.9,
+              "pub_year": 1943
+            },
+            {
+              "_id": 52,
+              "rank": 2,
+              "name": "All Schools",
+              "author": {
+                  "_id": 51,
+                  "author_first": "Neil",
+                  "author_middle": null,
+                  "author_last": "Cambell",
+              },
+              "appearences": {
+                  "total": 100
+              },
+              "score": 9.9,
+              "pub_year": 1943
+            },
+            {
+              "_id": 52,
+              "rank": 3,
+              "name": "All Schools",
+              "author": {
+                  "_id": 51,
+                  "author_first": "Neil",
+                  "author_middle": null,
+                  "author_last": "Cambell",
+              },
+              "appearences": {
+                  "total": 100
+              },
+              "score": 9.9,
+              "pub_year": 1943
+            },
+            {
+              "_id": 52,
+              "rank": 4,
+              "name": "All Schools",
+              "author": {
+                  "_id": 51,
+                  "author_first": "Neil",
+                  "author_middle": null,
+                  "author_last": "Cambell",
+              },
+              "appearences": {
+                  "total": 100
+              },
+              "score": 9.9,
+              "pub_year": 1943
+            },
+            {
+              "_id": 52,
+              "rank": 5,
+              "name": "All Schools",
+              "author": {
+                  "_id": 51,
+                  "author_first": "Neil",
+                  "author_middle": null,
+                  "author_last": "Cambell",
+              },
+              "appearences": {
+                  "total": 100
+              },
+              "score": 9.9,
+              "pub_year": 1943
+            },
+            {
+              "_id": 52,
+              "rank": 6,
+              "name": "All Schools",
+              "author": {
+                  "_id": 51,
+                  "author_first": "Neil",
+                  "author_middle": null,
+                  "author_last": "Cambell",
+              },
+              "appearences": {
+                  "total": 100
+              },
+              "score": 9.9,
+              "pub_year": 1943
+            },
+            {
+              "_id": 52,
+              "rank": 7,
+              "name": "All Schools",
+              "author": {
+                  "_id": 51,
+                  "author_first": "Neil",
+                  "author_middle": null,
+                  "author_last": "Cambell",
+              },
+              "appearences": {
+                  "total": 100
+              },
+              "score": 9.9,
+              "pub_year": 1943
+            },
+            {
+              "_id": 52,
+              "rank": 8,
+              "name": "All Schools",
+              "author": {
+                  "_id": 51,
+                  "author_first": "Neil",
+                  "author_middle": null,
+                  "author_last": "Cambell",
+              },
+              "appearences": {
+                  "total": 100
+              },
+              "score": 9.9,
+              "pub_year": 1943
+            },
+            {
+              "_id": 52,
+              "rank": 9,
+              "name": "All Schools",
+              "author": {
+                  "_id": 51,
+                  "author_first": "Neil",
+                  "author_middle": null,
+                  "author_last": "Cambell",
+              },
+              "appearences": {
+                  "total": 100
+              },
+              "score": 9.9,
+              "pub_year": 1943
+            },
+            {
+              "_id": 52,
+              "rank": 10,
+              "name": "All Schools",
+              "author": {
+                  "_id": 51,
+                  "author_first": "Neil",
+                  "author_middle": null,
+                  "author_last": "Cambell",
+              },
+              "appearences": {
+                  "total": 100
+              },
+              "score": 9.9,
+              "pub_year": 1943
+            },
+            {
+              "_id": 52,
+              "rank": 11,
+              "name": "All Schools",
+              "author": {
+                  "_id": 51,
+                  "author_first": "Neil",
+                  "author_middle": null,
+                  "author_last": "Cambell",
+              },
+              "appearences": {
+                  "total": 100
+              },
+              "score": 9.9,
+              "pub_year": 1943
+          },
+        ]
+      },
+          closestPeerTeachingProfiles: [
+            {
+              title: 'New York University',
+              url: 'www.google.com'
+            },
+            {
+              title: 'Yale University',
+              url: 'www.google.com'
+            },
+            {
+              title: 'University of Chicago',
+              url: 'www.google.com'
+            },
+            {
+              title: 'University of California - Berkley',
+              url: 'www.google.com'
+            },
+            {
+              title: 'University of Virginia',
+              url: 'www.google.com'
+            },
+          ],
+          fieldChart:[{
+            label: 'Economics',
+            values: [
+              {x: '1997', y: 2000},
+              {x: '1998', y: 2000},
+              {x: '1999', y: 2000},
+              {x: '2000', y: 2000},
+              {x: '2001', y: 2000},
+              {x: '2002', y: 2000},
+              {x: '2003', y: 2000},
+              {x: '2004', y: 2000},
+              {x: '2005', y: 2000},
+              {x: '2006', y: 2000},
+              {x: '2007', y: 2000},
+              {x: '2008', y: 2000},
+              {x: '2009', y: 2000},
+              {x: '2010', y: 2000},
+              {x: '2011', y: 6000},
+              {x: '2012', y: 2500},
+              {x: '2013', y: 5500},
+              {x: '2014', y: 6000},
+              {x: '2015', y: 4000},
+              {x: '2016', y: 4000},
+            ]
+          },
+          {
+            label: 'Literature',
+            values: [
+              {x: '1997', y: 3000},
+              {x: '1998', y: 5000},
+              {x: '1999', y: 0},
+              {x: '2000', y: 4000},
+              {x: '2001', y: 0},
+              {x: '2002', y: 1500},
+              {x: '2003', y: 3000},
+              {x: '2004', y: 0},
+              {x: '2005', y: 6000},
+              {x: '2006', y: 0},
+              {x: '2007', y: 0},
+              {x: '2008', y: 7000},
+              {x: '2009', y: 0},
+              {x: '2010', y: 10000},
+              {x: '2011', y: 0},
+              {x: '2012', y: 20000},
+              {x: '2013', y: 0},
+              {x: '2014', y: 2000},
+              {x: '2015', y: 3000},
+              {x: '2016', y: 3000},
+            ]
+          },
+          {
+            label: 'History',
+            values: [
+              {x: '1997', y: 3800},
+              {x: '1998', y: 3800},
+              {x: '1999', y: 3800},
+              {x: '2000', y: 3800},
+              {x: '2001', y: 3800},
+              {x: '2002', y: 3800},
+              {x: '2003', y: 3800},
+              {x: '2004', y: 3800},
+              {x: '2005', y: 3800},
+              {x: '2006', y: 3800},
+              {x: '2007', y: 3800},
+              {x: '2008', y: 3800},
+              {x: '2009', y: 3800},
+              {x: '2010', y: 3800},
+              {x: '2011', y: 3800},
+              {x: '2012', y: 7000},
+              {x: '2013', y: 3800},
+              {x: '2014', y: 2000},
+              {x: '2015', y: 2000},
+              {x: '2016', y: 2000},
+            ]
+          },
+          {
+            label: 'English',
+            values: [
+              {x: '1997', y: 3000},
+              {x: '1998', y: 5000},
+              {x: '1999', y: 0},
+              {x: '2000', y: 4000},
+              {x: '2001', y: 0},
+              {x: '2002', y: 1500},
+              {x: '2003', y: 3000},
+              {x: '2004', y: 0},
+              {x: '2005', y: 6000},
+              {x: '2006', y: 0},
+              {x: '2007', y: 0},
+              {x: '2008', y: 7000},
+              {x: '2009', y: 0},
+              {x: '2010', y: 0},
+              {x: '2011', y: 0},
+              {x: '2012', y: 2000},
+              {x: '2013', y: 0},
+              {x: '2014', y: 0},
+              {x: '2015', y: 2000},
+              {x: '2016', y: 3800},
+            ]
+          },
+          {
+            label: 'Biology',
+            values: [
+              {x: '1997', y: 3000},
+              {x: '1998', y: 5000},
+              {x: '1999', y: 0},
+              {x: '2000', y: 4000},
+              {x: '2001', y: 0},
+              {x: '2002', y: 1500},
+              {x: '2003', y: 3000},
+              {x: '2004', y: 0},
+              {x: '2005', y: 6000},
+              {x: '2006', y: 0},
+              {x: '2007', y: 0},
+              {x: '2008', y: 7000},
+              {x: '2009', y: 0},
+              {x: '2010', y: 0},
+              {x: '2011', y: 0},
+              {x: '2012', y: 2000},
+              {x: '2013', y: 0},
+              {x: '2014', y: 0},
+              {x: '2015', y: 0},
+              {x: '2016', y: 4000},
+            ]
+          },]
         })
       )
     }, env.REQUEST_DEV_TIMMING)
@@ -46,7 +810,96 @@ export let settledGetLandingUniversityFieldYearPromise = (resolve, reject) => {
       clearInterval(tid)
       resolve(
         httpResultWrapperSimulator({
-          mostFrecuent: [ /* @@@ FEDE @@@*/ ]
+          mostFrecuent: [
+            {
+              "_id": 12,
+              "title": "Introduction to Economics",
+              "author": {
+                  "_id": 32,
+                  "author_first": "Neil",
+                  "author_middle": null,
+                  "author_last": "Cambell",
+              },
+              "publisher": {
+                  "_id": 14,
+                  "name": "Pengiun Books"
+              },
+              "pub_year": 2000,
+              "appearences": {
+                  "by_unique_field": {
+                      "_id": 152,
+                      "name": "Math",
+                      "syllabus_count": 9
+                  }
+              }
+            },
+            {
+              "_id": 12,
+              "title": "Introduction to Economics",
+              "author": {
+                  "_id": 32,
+                  "author_first": "Neil",
+                  "author_middle": null,
+                  "author_last": "Cambell",
+              },
+              "publisher": {
+                  "_id": 14,
+                  "name": "Pengiun Books"
+              },
+              "pub_year": 2000,
+              "appearences": {
+                  "by_unique_field": {
+                      "_id": 152,
+                      "name": "Math",
+                      "syllabus_count": 9
+                  }
+              }
+            },
+            {
+              "_id": 12,
+              "title": "Introduction to Economics",
+              "author": {
+                  "_id": 32,
+                  "author_first": "Neil",
+                  "author_middle": null,
+                  "author_last": "Cambell",
+              },
+              "publisher": {
+                  "_id": 14,
+                  "name": "Pengiun Books"
+              },
+              "pub_year": 2000,
+              "appearences": {
+                  "by_unique_field": {
+                      "_id": 152,
+                      "name": "Math",
+                      "syllabus_count": 9
+                  }
+              }
+            },
+            {
+              "_id": 12,
+              "title": "Introduction to Economics",
+              "author": {
+                  "_id": 32,
+                  "author_first": "Neil",
+                  "author_middle": null,
+                  "author_last": "Cambell",
+              },
+              "publisher": {
+                  "_id": 14,
+                  "name": "Pengiun Books"
+              },
+              "pub_year": 2000,
+              "appearences": {
+                  "by_unique_field": {
+                      "_id": 152,
+                      "name": "Math",
+                      "syllabus_count": 9
+                  }
+              }
+            },
+          ]
         })
       )
     }, env.REQUEST_DEV_TIMMING)

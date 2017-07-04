@@ -9,9 +9,9 @@ export const titleParams = {
   authors: [
     2, 3
   ],
-  schools: 3,
-  fields: 4,
-  countries: 5,
+  schools: [3],
+  fields: [4],
+  countries: [1],
   us_state: "Testing",
   query: "Testing"
 }
@@ -21,8 +21,8 @@ export const authorParams = {
   schools: [
     1, 2
   ],
-  fields: 1,
-  countries: 1,
+  fields: [1],
+  countries: [1],
   query: "Testing"
 }
 
@@ -31,7 +31,7 @@ export const institutionParams = {
   fields: [
     1, 2
   ],
-  countries: 1,
+  countries: [1],
   query: "Testing"
 }
 
@@ -44,7 +44,7 @@ export const publisherParams = {
   fields: [
     1, 2
   ],
-  countries: 1,
+  countries: [1],
   query: "Testing"
 }
 
@@ -78,3 +78,12 @@ export const fieldResultId = 1
 export const institutionResultId = 1
 export const countryResultId = 1
 export const publisherResultId = 1
+
+export const landingUniversityParams = {
+  years: [1990, 1999]
+}
+
+export const landingUniversityFieldParams = {
+  years: [1990, 1999],
+  own_selection: true
+}

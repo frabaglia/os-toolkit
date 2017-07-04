@@ -61,7 +61,7 @@ class SyllabusExplorerHTTPService {
   }
 
   getTitleResultsList = (params) => {
-    let url = syllabusURLQueryBuilder.getQueryUrlTitleResultsListParams(this.BASE_URL, params)
+    let url = syllabusURLQueryBuilder.setQueryUrlTitleResultsListParams(this.BASE_URL, params)
 
     console.log("Creating HTTP request action: " + url)
 
@@ -69,7 +69,7 @@ class SyllabusExplorerHTTPService {
   }
 
   getTitleResult = (_id) => {
-    let url = syllabusURLQueryBuilder.getQueryUrlTitleResult(this.BASE_URL, _id)
+    let url = syllabusURLQueryBuilder.setQueryUrlTitleResult(this.BASE_URL, _id)
 
     console.log("Creating HTTP request action: " + url)
 
@@ -77,7 +77,7 @@ class SyllabusExplorerHTTPService {
   }
 
   getAuthorResultsList = (params) => {
-    let url = syllabusURLQueryBuilder.getQueryUrlAuthorResultsListParams(this.BASE_URL, params)
+    let url = syllabusURLQueryBuilder.setQueryUrlAuthorResultsListParams(this.BASE_URL, params)
 
     console.log("Creating HTTP request action: " + url)
 
@@ -85,7 +85,7 @@ class SyllabusExplorerHTTPService {
   }
 
   getAuthorResult = (_id) => {
-    let url = syllabusURLQueryBuilder.getQueryUrlAuthorResult(this.BASE_URL, _id)
+    let url = syllabusURLQueryBuilder.setQueryUrlAuthorResult(this.BASE_URL, _id)
 
     console.log("Creating HTTP request action: " + url)
 
@@ -93,7 +93,7 @@ class SyllabusExplorerHTTPService {
   }
 
   getFieldResultsList = (params) => {
-    let url = syllabusURLQueryBuilder.getQueryUrlFieldResultsListParams(this.BASE_URL, params)
+    let url = syllabusURLQueryBuilder.setQueryUrlFieldResultsListParams(this.BASE_URL, params)
 
     console.log("Creating HTTP request action: " + url)
 
@@ -101,7 +101,7 @@ class SyllabusExplorerHTTPService {
   }
 
   getFieldResult = (_id) => {
-    let url = syllabusURLQueryBuilder.getQueryUrlFieldResult(this.BASE_URL, _id)
+    let url = syllabusURLQueryBuilder.setQueryUrlFieldResult(this.BASE_URL, _id)
 
     console.log("Creating HTTP request action: " + url)
 
@@ -109,7 +109,7 @@ class SyllabusExplorerHTTPService {
   }
 
   getInstitutionResultsList = (params) => {
-    let url = syllabusURLQueryBuilder.getQueryUrlInstitutionResultsListParams(this.BASE_URL, params)
+    let url = syllabusURLQueryBuilder.setQueryUrlInstitutionResultsListParams(this.BASE_URL, params)
 
     console.log("Creating HTTP request action: " + url)
 
@@ -117,7 +117,7 @@ class SyllabusExplorerHTTPService {
   }
 
   getInstitutionResult = (_id) => {
-    let url = syllabusURLQueryBuilder.getQueryUrlInstitutionResult(this.BASE_URL, _id)
+    let url = syllabusURLQueryBuilder.setQueryUrlInstitutionResult(this.BASE_URL, _id)
 
     console.log("Creating HTTP request action: " + url)
 
@@ -125,7 +125,7 @@ class SyllabusExplorerHTTPService {
   }
 
   getCountryResultsList = (params) => {
-    let url = syllabusURLQueryBuilder.getQueryUrlCountryResultsListParams(this.BASE_URL, params)
+    let url = syllabusURLQueryBuilder.setQueryUrlCountryResultsListParams(this.BASE_URL, params)
 
     console.log("Creating HTTP request action: " + url)
 
@@ -133,7 +133,7 @@ class SyllabusExplorerHTTPService {
   }
 
   getCountryResult = (_id) => {
-    let url = syllabusURLQueryBuilder.getQueryUrlCountryResult(this.BASE_URL, _id)
+    let url = syllabusURLQueryBuilder.setQueryUrlCountryResult(this.BASE_URL, _id)
 
     console.log("Creating HTTP request action: " + url)
 
@@ -141,7 +141,7 @@ class SyllabusExplorerHTTPService {
   }
 
   getPublisherResultsList = (params) => {
-    let url = syllabusURLQueryBuilder.getQueryUrlPublisherResultsListParams(this.BASE_URL, params)
+    let url = syllabusURLQueryBuilder.setQueryUrlPublisherResultsListParams(this.BASE_URL, params)
 
     console.log("Creating HTTP request action: " + url)
 
@@ -149,7 +149,7 @@ class SyllabusExplorerHTTPService {
   }
 
   getPublisherResult = (_id) => {
-    let url = syllabusURLQueryBuilder.getQueryUrlPublisherResult(this.BASE_URL, _id)
+    let url = syllabusURLQueryBuilder.setQueryUrlPublisherResult(this.BASE_URL, _id)
 
     console.log("Creating HTTP request action: " + url)
 

@@ -8,7 +8,10 @@ import {
   settledGetAuthorResultsListPromise,
   settledGetInstructorResultsListPromise,
   settledGetFullTextResultsListPromise,
-  settledGetAuthorResultPromise
+  settledGetAuthorResultPromise,
+  settledGetLandingUniversityPromise,
+  settledGetLandingUniversityFieldPromise,
+  settledGetLandingUniversityFieldYearPromise
 } from './apiMock'
 import {
   env
@@ -29,8 +32,37 @@ class SyllabusEduPortalHTTPService {
     console.log("REJECTED_PROMISE:" + this.REJECTED_PROMISE)
   }
 
+  /* University Landing */
+
+  //TODO: TEST
+  getLandingUniversity = (params) => {
+    let url = syllabusURLQueryBuilder.setQueryUrlLandingUniversity(this.BASE_URL, params)
+
+    console.log("Creating SyllabusEduPortalHTTPService request action: " + url)
+
+    return (this.SERVER_ENV === "development") ? new Promise(settledGetLandingUniversityPromise) : axios.get(url)
+  }
+  //TODO: TEST
+  getLandingUniversityFieldRequest = (params) => {
+    let url = syllabusURLQueryBuilder.setQueryUrlLandingUniversityField(this.BASE_URL, params)
+
+    console.log("Creating SyllabusEduPortalHTTPService request action: " + url)
+
+    return (this.SERVER_ENV === "development") ? new Promise(settledGetLandingUniversityFieldPromise) : axios.get(url)
+  }
+  //TODO: TEST
+  getLandingUniversityFieldYearRequest = (params) => {
+    let url = syllabusURLQueryBuilder.setQueryUrlLandingUniversityFieldYear(this.BASE_URL, params)
+
+    console.log("Creating SyllabusEduPortalHTTPService request action: " + url)
+
+    return (this.SERVER_ENV === "development") ? new Promise(settledGetLandingUniversityFieldYearPromise) : axios.get(url)
+  }
+
+  /* Results list */
+
   getTitleResultsList = (params) => {
-    let url = syllabusURLQueryBuilder.getQueryUrlTitleResultsListParams(this.BASE_URL, params)
+    let url = syllabusURLQueryBuilder.setQueryUrlTitleResultsListParams(this.BASE_URL, params)
 
     console.log("Creating SyllabusEduPortalHTTPService request action: " + url)
 
@@ -38,7 +70,7 @@ class SyllabusEduPortalHTTPService {
   }
 
   getTitleResult = (_id) => {
-    let url = syllabusURLQueryBuilder.getQueryUrlTitleResult(this.BASE_URL, _id)
+    let url = syllabusURLQueryBuilder.setQueryUrlTitleResult(this.BASE_URL, _id)
 
     console.log("Creating SyllabusEduPortalHTTPService request action: " + url)
 
@@ -46,7 +78,7 @@ class SyllabusEduPortalHTTPService {
   }
 
   getAuthorResultsList = (params) => {
-    let url = syllabusURLQueryBuilder.getQueryUrlAuthorResultsListParams(this.BASE_URL, params)
+    let url = syllabusURLQueryBuilder.setQueryUrlAuthorResultsListParams(this.BASE_URL, params)
 
     console.log("Creating SyllabusEduPortalHTTPService request action: " + url)
 
@@ -54,7 +86,7 @@ class SyllabusEduPortalHTTPService {
   }
 
   getInstructorResultsList = (params) => {
-    let url = syllabusURLQueryBuilder.getQueryUrlInstructorResultsListParams(this.BASE_URL, params)
+    let url = syllabusURLQueryBuilder.setQueryUrlInstructorResultsListParams(this.BASE_URL, params)
 
     console.log("Creating SyllabusEduPortalHTTPService request action: " + url)
 
@@ -62,7 +94,7 @@ class SyllabusEduPortalHTTPService {
   }
 
   getFullTextResultsList = (params) => {
-    let url = syllabusURLQueryBuilder.getQueryUrlFullTextResultsListParams(this.BASE_URL, params)
+    let url = syllabusURLQueryBuilder.setQueryUrlFullTextResultsListParams(this.BASE_URL, params)
 
     console.log("Creating SyllabusEduPortalHTTPService request action: " + url)
 
@@ -70,7 +102,7 @@ class SyllabusEduPortalHTTPService {
   }
 
   getAuthorResult = (_id) => {
-    let url = syllabusURLQueryBuilder.getQueryUrlAuthorResult(this.BASE_URL, _id)
+    let url = syllabusURLQueryBuilder.setQueryUrlAuthorResult(this.BASE_URL, _id)
 
     console.log("Creating SyllabusEduPortalHTTPService request action: " + url)
     return (this.SERVER_ENV === "development") ? new Promise(settledGetAuthorResultPromise) : axios.get(url)

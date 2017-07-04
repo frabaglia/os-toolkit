@@ -13,6 +13,33 @@ describe('SyllabusEduPortalHTTPService works', () => {
         expect(response.data).toBeDefined()
       })
   })
+  test('syllabusEduPortalHTTPService.getLandingUniversity()', () => {
+    expect.assertions(3)
+    return syllabusEduPortalHTTPService.getTitleResultsList({})
+      .then(response => {
+        expect(response.status).toBe(200)
+        expect(response.data).not.toBeNull()
+        expect(response.data).toBeDefined()
+      })
+  })
+  test('syllabusEduPortalHTTPService.getLandingUniversityFieldRequest()', () => {
+    expect.assertions(3)
+    return syllabusEduPortalHTTPService.getLandingUniversityFieldRequest({})
+      .then(response => {
+        expect(response.status).toBe(200)
+        expect(response.data).not.toBeNull()
+        expect(response.data).toBeDefined()
+      })
+  })
+  test('syllabusEduPortalHTTPService.getLandingUniversityFieldYearRequest()', () => {
+    expect.assertions(3)
+    return syllabusEduPortalHTTPService.getLandingUniversityFieldYearRequest({})
+      .then(response => {
+        expect(response.status).toBe(200)
+        expect(response.data).not.toBeNull()
+        expect(response.data).toBeDefined()
+      })
+  })
   test('syllabusEduPortalHTTPService.getTitleResult()', () => {
     expect.assertions(3)
     return syllabusEduPortalHTTPService.getTitleResult(2)

@@ -22,18 +22,18 @@ describe('SyllabusEduPortalHTTPService works', () => {
         expect(response.data).toBeDefined()
       })
   })
-  test('syllabusEduPortalHTTPService.getLandingUniversityFieldRequest()', () => {
+  test('syllabusEduPortalHTTPService.getLandingUniversityField()', () => {
     expect.assertions(3)
-    return syllabusEduPortalHTTPService.getLandingUniversityFieldRequest({})
+    return syllabusEduPortalHTTPService.getLandingUniversityField({})
       .then(response => {
         expect(response.status).toBe(200)
         expect(response.data).not.toBeNull()
         expect(response.data).toBeDefined()
       })
   })
-  test('syllabusEduPortalHTTPService.getLandingUniversityFieldYearRequest()', () => {
+  test('syllabusEduPortalHTTPService.getLandingUniversityFieldYear()', () => {
     expect.assertions(3)
-    return syllabusEduPortalHTTPService.getLandingUniversityFieldYearRequest({})
+    return syllabusEduPortalHTTPService.getLandingUniversityFieldYear({})
       .then(response => {
         expect(response.status).toBe(200)
         expect(response.data).not.toBeNull()

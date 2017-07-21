@@ -1337,91 +1337,363 @@ export let settledGetTitleResultPromise = (resolve, reject) => {
               }
             ]
           },
-          "textAssignedWith": [{
-              "_id": 55,
-              "title": "Thesis #1",
-              "rank": 10,
+          topRanked: { "columbia": [
+            {
+              "_id": 52,
+              "rank": 1,
+              "name": "Columbia",
               "author": {
-                "_id": 55,
-                "author_first": "Neil",
-                "author_middle": null,
-                "author_last": "Cambell",
+                  "_id": 51,
+                  "author_first": "Neil",
+                  "author_middle": null,
+                  "author_last": "Cambell",
               },
+              "appearences": {
+                  "total": 100
+              },
+              "score": 9.9,
               "pub_year": 1943
             },
             {
-              "_id": 55,
-              "title": "Thesis #2",
-              "rank": 10,
+              "_id": 52,
+              "rank": 2,
+              "name": "Columbia",
               "author": {
-                "_id": 55,
-                "author_first": "Neil",
-                "author_middle": null,
-                "author_last": "Cambell",
+                  "_id": 51,
+                  "author_first": "Neil",
+                  "author_middle": null,
+                  "author_last": "Cambell",
               },
+              "appearences": {
+                  "total": 100
+              },
+              "score": 9.9,
               "pub_year": 1943
             },
             {
-              "_id": 55,
-              "title": "Thesis #3",
-              "rank": 10,
+              "_id": 52,
+              "rank": 3,
+              "name": "Columbia",
               "author": {
-                "_id": 55,
-                "author_first": "Neil",
-                "author_middle": null,
-                "author_last": "Cambell",
+                  "_id": 51,
+                  "author_first": "Neil",
+                  "author_middle": null,
+                  "author_last": "Cambell",
               },
+              "appearences": {
+                  "total": 100
+              },
+              "score": 9.9,
               "pub_year": 1943
             },
             {
-              "_id": 55,
-              "title": "Thesis #4",
-              "rank": 10,
+              "_id": 52,
+              "rank": 4,
+              "name": "Columbia",
               "author": {
-                "_id": 55,
-                "author_first": "Neil",
-                "author_middle": null,
-                "author_last": "Cambell",
+                  "_id": 51,
+                  "author_first": "Neil",
+                  "author_middle": null,
+                  "author_last": "Cambell",
               },
+              "appearences": {
+                  "total": 100
+              },
+              "score": 9.9,
               "pub_year": 1943
             },
             {
-              "_id": 55,
-              "title": "Thesis #5",
-              "rank": 10,
+              "_id": 52,
+              "rank": 5,
+              "name": "Columbia",
               "author": {
-                "_id": 55,
-                "author_first": "Neil",
-                "author_middle": null,
-                "author_last": "Cambell",
+                  "_id": 51,
+                  "author_first": "Neil",
+                  "author_middle": null,
+                  "author_last": "Cambell",
               },
+              "appearences": {
+                  "total": 100
+              },
+              "score": 9.9,
               "pub_year": 1943
             },
             {
-              "_id": 55,
-              "title": "Thesis #6",
-              "rank": 10,
+              "_id": 52,
+              "rank": 6,
+              "name": "Columbia",
               "author": {
-                "_id": 55,
-                "author_first": "Neil",
-                "author_middle": null,
-                "author_last": "Cambell",
+                  "_id": 51,
+                  "author_first": "Neil",
+                  "author_middle": null,
+                  "author_last": "Cambell",
               },
+              "appearences": {
+                  "total": 100
+              },
+              "score": 9.9,
               "pub_year": 1943
             },
             {
-              "_id": 55,
-              "title": "Thesis #7",
-              "rank": 10,
+              "_id": 52,
+              "rank": 7,
+              "name": "Columbia",
               "author": {
-                "_id": 55,
-                "author_first": "Neil",
-                "author_middle": null,
-                "author_last": "Cambell",
+                  "_id": 51,
+                  "author_first": "Neil",
+                  "author_middle": null,
+                  "author_last": "Cambell",
               },
+              "appearences": {
+                  "total": 100
+              },
+              "score": 9.9,
               "pub_year": 1943
             },
-          ],
+            {
+              "_id": 52,
+              "rank": 8,
+              "name": "Columbia",
+              "author": {
+                  "_id": 51,
+                  "author_first": "Neil",
+                  "author_middle": null,
+                  "author_last": "Cambell",
+              },
+              "appearences": {
+                  "total": 100
+              },
+              "score": 9.9,
+              "pub_year": 1943
+            },
+            {
+              "_id": 52,
+              "rank": 9,
+              "name": "Columbia",
+              "author": {
+                  "_id": 51,
+                  "author_first": "Neil",
+                  "author_middle": null,
+                  "author_last": "Cambell",
+              },
+              "appearences": {
+                  "total": 100
+              },
+              "score": 9.9,
+              "pub_year": 1943
+            },
+            {
+              "_id": 52,
+              "rank": 10,
+              "name": "Columbia",
+              "author": {
+                  "_id": 51,
+                  "author_first": "Neil",
+                  "author_middle": null,
+                  "author_last": "Cambell",
+              },
+              "appearences": {
+                  "total": 100
+              },
+              "score": 9.9,
+              "pub_year": 1943
+            },
+            {
+              "_id": 52,
+              "rank": 11,
+              "name": "Columbia",
+              "author": {
+                  "_id": 51,
+                  "author_first": "Neil",
+                  "author_middle": null,
+                  "author_last": "Cambell",
+              },
+              "appearences": {
+                  "total": 100
+              },
+              "score": 9.9,
+              "pub_year": 1943
+          },
+        ],
+          "allSchools": [
+            {
+              "_id": 52,
+              "rank": 1,
+              "name": "All Schools",
+              "author": {
+                  "_id": 51,
+                  "author_first": "Neil",
+                  "author_middle": null,
+                  "author_last": "Cambell",
+              },
+              "appearences": {
+                  "total": 100
+              },
+              "score": 9.9,
+              "pub_year": 1943
+            },
+            {
+              "_id": 52,
+              "rank": 2,
+              "name": "All Schools",
+              "author": {
+                  "_id": 51,
+                  "author_first": "Neil",
+                  "author_middle": null,
+                  "author_last": "Cambell",
+              },
+              "appearences": {
+                  "total": 100
+              },
+              "score": 9.9,
+              "pub_year": 1943
+            },
+            {
+              "_id": 52,
+              "rank": 3,
+              "name": "All Schools",
+              "author": {
+                  "_id": 51,
+                  "author_first": "Neil",
+                  "author_middle": null,
+                  "author_last": "Cambell",
+              },
+              "appearences": {
+                  "total": 100
+              },
+              "score": 9.9,
+              "pub_year": 1943
+            },
+            {
+              "_id": 52,
+              "rank": 4,
+              "name": "All Schools",
+              "author": {
+                  "_id": 51,
+                  "author_first": "Neil",
+                  "author_middle": null,
+                  "author_last": "Cambell",
+              },
+              "appearences": {
+                  "total": 100
+              },
+              "score": 9.9,
+              "pub_year": 1943
+            },
+            {
+              "_id": 52,
+              "rank": 5,
+              "name": "All Schools",
+              "author": {
+                  "_id": 51,
+                  "author_first": "Neil",
+                  "author_middle": null,
+                  "author_last": "Cambell",
+              },
+              "appearences": {
+                  "total": 100
+              },
+              "score": 9.9,
+              "pub_year": 1943
+            },
+            {
+              "_id": 52,
+              "rank": 6,
+              "name": "All Schools",
+              "author": {
+                  "_id": 51,
+                  "author_first": "Neil",
+                  "author_middle": null,
+                  "author_last": "Cambell",
+              },
+              "appearences": {
+                  "total": 100
+              },
+              "score": 9.9,
+              "pub_year": 1943
+            },
+            {
+              "_id": 52,
+              "rank": 7,
+              "name": "All Schools",
+              "author": {
+                  "_id": 51,
+                  "author_first": "Neil",
+                  "author_middle": null,
+                  "author_last": "Cambell",
+              },
+              "appearences": {
+                  "total": 100
+              },
+              "score": 9.9,
+              "pub_year": 1943
+            },
+            {
+              "_id": 52,
+              "rank": 8,
+              "name": "All Schools",
+              "author": {
+                  "_id": 51,
+                  "author_first": "Neil",
+                  "author_middle": null,
+                  "author_last": "Cambell",
+              },
+              "appearences": {
+                  "total": 100
+              },
+              "score": 9.9,
+              "pub_year": 1943
+            },
+            {
+              "_id": 52,
+              "rank": 9,
+              "name": "All Schools",
+              "author": {
+                  "_id": 51,
+                  "author_first": "Neil",
+                  "author_middle": null,
+                  "author_last": "Cambell",
+              },
+              "appearences": {
+                  "total": 100
+              },
+              "score": 9.9,
+              "pub_year": 1943
+            },
+            {
+              "_id": 52,
+              "rank": 10,
+              "name": "All Schools",
+              "author": {
+                  "_id": 51,
+                  "author_first": "Neil",
+                  "author_middle": null,
+                  "author_last": "Cambell",
+              },
+              "appearences": {
+                  "total": 100
+              },
+              "score": 9.9,
+              "pub_year": 1943
+            },
+            {
+              "_id": 52,
+              "rank": 11,
+              "name": "All Schools",
+              "author": {
+                  "_id": 51,
+                  "author_first": "Neil",
+                  "author_middle": null,
+                  "author_last": "Cambell",
+              },
+              "appearences": {
+                  "total": 100
+              },
+              "score": 9.9,
+              "pub_year": 1943
+          },
+        ]
+      },
           "availability": {
             "openVersion": { // OR EXTERNAL LINKS, NO DB INDEXED?
               "_id": 55,
